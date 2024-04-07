@@ -1,0 +1,117 @@
+.container {
+    width: 300px;
+    height: 300px;
+    margin: 125px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.cube {
+    transform-style: preserve-3d;
+    transition: transform 2s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    line-height: 300px;
+    font-size: 35px;
+    text-align: center;
+    transform: rotateX(-45deg) rotateY(-45deg);
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .65;
+}
+
+/* Cube Walls */
+
+.front {
+    background-color: red;
+    transform: translateZ(150px);
+}
+.back {
+    background-color: aqua;
+    transform: rotateY(180deg) translateZ(150px);
+}
+.top {
+    background-color: greenyellow;
+    transform: rotateX(90deg) translateZ(150px);
+}
+.bottom {
+    background-color: orange;
+    transform: rotateX(-90deg) translateZ(150px);
+
+}
+.left {
+    background-color: lightcoral;
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.right {
+    background-color: blueviolet;
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+/* Buttons */
+
+.btn-container {
+    margin: 60px;
+}
+.btn-container:nth-child(2) {
+    padding-top: 40px;
+}
+button {
+    margin: 3px;
+}
+
+/* Random wall animations */
+
+@keyframes wall1 {
+    from {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+}
+@keyframes wall2 {
+    from {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+}
+@keyframes wall3 {
+    from {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(-90deg) rotateY(0deg);
+    }
+}
+@keyframes wall4 {
+    from {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(90deg) rotateY(0deg);
+    }
+}
+@keyframes wall5 {
+    from {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(0deg) rotateY(90deg);
+    }
+}
+@keyframes wall6 {
+    from {
+        transform: rotateX(-45deg) rotateY(-45deg);
+    }
+    to {
+        transform: rotateX(0deg) rotateY(-90deg);
+    }
+}
